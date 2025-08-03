@@ -80,10 +80,10 @@ function UserManagementPage() {
                     return;
             }
 
-            const response = await api.post(endpoint, { userIds: selectedUserIds });
+           // const response = await api.post(endpoint, { userIds: selectedUserIds });
             setMessage(successMessage);
             setVariant('success');
-            fetchUsers(); // Re-fetch users to update table
+            fetchUsers(); 
         } catch (error) {
             console.error(`Error ${actionType}ing users:`, error);
             setMessage(error.response?.data?.message || `Failed to ${actionType} users.`);
